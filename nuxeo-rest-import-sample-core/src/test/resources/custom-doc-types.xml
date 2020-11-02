@@ -1,0 +1,15 @@
+<component name="com.nuxeo.sample.import.test.coretypes">
+
+  <require>org.nuxeo.ecm.core.CoreExtensions</require>
+
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <schema name="customSchema" prefix="cs" src="schemas/custom.xsd" />
+  </extension>
+
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+    <doctype name="CustomDoc" extends="File">
+      <schema name="customSchema" />
+    </doctype>
+  </extension>
+
+</component>
